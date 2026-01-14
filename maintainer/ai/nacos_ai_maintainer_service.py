@@ -343,6 +343,7 @@ class NacosAIMaintainerService(NacosMaintainerClient):
     async def get_agent_card(
         self,
         agent_name: str,
+        version:str,
         namespace_id: str,
         registration_type: str,
     ) -> AgentCardDetailInfo:
@@ -351,6 +352,7 @@ class NacosAIMaintainerService(NacosMaintainerClient):
 
         params = {
             "agentName": agent_name,
+            "version": version,
             "namespaceId": namespace_id,
             "registrationType": registration_type,
         }
